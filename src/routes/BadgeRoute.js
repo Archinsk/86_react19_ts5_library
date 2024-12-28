@@ -40,35 +40,27 @@ function BadgeRoute() {
     <>
       <h2>Badge</h2>
       <h3>Варианты использования</h3>
-      <div className="use-case-title">Без пропов</div>
-      <Badge>Важно!</Badge>
-      <div className="use-case-title">С темой</div>
-      <Badge theme="info">Важно!</Badge>
-      <div className="use-case-title">C темой, скругленный через классы</div>
-      <Badge
-        theme="warning"
-        className="rounded-pill"
-        onClick={(e) => {
-          console.log("Badge click");
-          console.log(e);
-        }}
-      >
-        Внимание
-      </Badge>
-      <div className="use-case-title">Внутри пункта навигации</div>
-      {/* <Nav
-        tag="ul"
-        className="navbar-nav bg-dark-subtle"
-        itemsList={defaultNav.itemsList}
-      /> */}
-      <div className="use-case-title">Внутри кнопки</div>
-      <Button theme="secondary" badge={defaultBadge}>
-        Сообщения
-      </Button>
-      <div className="use-case-title">Стилизованный через классы</div>
-      <Badge className="bg-dark-subtle border-start border-5 border-danger rounded-0">
-        Важно!
-      </Badge>
+      <p>
+        В тексте <Badge>Важно!</Badge>
+      </p>
+      <h3>Варианты стилизации</h3>
+      <p>
+        В тексте <Badge className="bg-danger text-white">Danger</Badge>
+      </p>
+      <p>
+        В тексте <Badge className="bg-warning text-black">Warning</Badge>
+      </p>
+      <p>
+        В тексте <Badge className="bg-success text-white">Success</Badge>
+      </p>
+      <p>
+        Со скругленными краями{" "}
+        <Badge className="bg-secondary text-white rounded">Success</Badge>
+      </p>
+      <p>
+        С полностью скруглением краями{" "}
+        <Badge className="bg-secondary text-white rounded-pill">Success</Badge>
+      </p>
     </>
   );
 }

@@ -1,27 +1,43 @@
 import React from "react";
-import "./Button.css";
+import "./DropdownItem.css";
+import { Link } from "react-router-dom";
 
-interface ButtonProps
+interface DropdownItemProps
   extends React.DetailedHTMLProps<
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {}
+    React.AnchorHTMLAttributes<HTMLAnchorElement>,
+    HTMLAnchorElement
+  > {
+  routerLink: boolean;
+}
 
-const Button: React.FC<ButtonProps> = ({
+const DropdownItem: React.FC<DropdownItemProps> = ({
   className,
   children,
-  type = "button",
+  href = "#",
+  routerLink,
   ...props
 }) => {
-  return (
-    <button
-      className={`button${className ? " " + className : ""}`}
-      type={type}
-      {...props}
-    >
-      {children}
-    </button>
-  );
+  if (routerLink) {
+    return (
+      <Link
+        to={href}
+        className={`nav-link${className ? " " + className : ""}`}
+        {...props}
+      >
+        {children}
+      </Link>
+    );
+  } else {
+    return (
+      <a
+        href={href}
+        className={`nav-link${className ? " " + className : ""}`}
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  }
 };
 
-export default Button;
+export default DropdownItem;

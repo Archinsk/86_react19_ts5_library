@@ -1,0 +1,12 @@
+@import "./assets/fonts/fonts.css";
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "inter";
+  margin: 0;
+}

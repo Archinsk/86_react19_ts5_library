@@ -1,6 +1,6 @@
 //import React from "react";
-import RbDropdownItem from "../components/Bootstrap_5.3.3/RbDropdownItem";
-import RbDropdownMenu from "../components/Bootstrap_5.3.3/RbDropdownMenu";
+import DropdownItem from "../components/DropdownItem/DropdownItem";
+import DropdownMenu from "../components/DropdownMenu/DropdownMenu";
 
 function DropdownItemRoute() {
   return (
@@ -10,40 +10,40 @@ function DropdownItemRoute() {
       <div className="use-case-title">
         Базовые типы (ссылка, ссылка-роутер, активная, отключенная, с иконкой)
       </div>
-      <RbDropdownMenu custom className="show position-static">
-        <RbDropdownItem type="a" href="https://ya.ru">
+      <DropdownMenu custom className="show position-static">
+        <DropdownItem type="a" href="https://ya.ru">
           Обычная ссылка
-        </RbDropdownItem>
-        <RbDropdownItem href="/icon">Ссылка-роутер</RbDropdownItem>
-        <RbDropdownItem href="/dropdownitem" active>
+        </DropdownItem>
+        <DropdownItem href="/icon">Ссылка-роутер</DropdownItem>
+        <DropdownItem href="/dropdownitem" active>
           Активная
-        </RbDropdownItem>
-        <RbDropdownItem href="/nav" disabled>
+        </DropdownItem>
+        <DropdownItem href="/nav" disabled>
           Отключенная
-        </RbDropdownItem>
-        <RbDropdownItem
+        </DropdownItem>
+        <DropdownItem
           href="/icon"
           icon="star"
           badge={{ className: "ms-2", theme: "success", text: "Значок" }}
         >
           С иконкой и значком
-        </RbDropdownItem>
-      </RbDropdownMenu>
+        </DropdownItem>
+      </DropdownMenu>
       <div className="use-case-title">Стилизованный через классы</div>
-      <RbDropdownMenu custom className="show position-static">
-        <RbDropdownItem type="a" href="https://ya.ru">
+      <DropdownMenu custom className="show position-static">
+        <DropdownItem type="a" href="https://ya.ru">
           Обычная
-        </RbDropdownItem>
-        <RbDropdownItem href="/dropdownitem" className="bg-info text-white">
+        </DropdownItem>
+        <DropdownItem href="/dropdownitem" className="bg-info text-white">
           Стилизация 1
-        </RbDropdownItem>
-        <RbDropdownItem
+        </DropdownItem>
+        <DropdownItem
           href="/nav"
           className="bg-warning rounded-end border border-danger border-3"
         >
           Стилизация 2
-        </RbDropdownItem>
-      </RbDropdownMenu>
+        </DropdownItem>
+      </DropdownMenu>
     </>
   );
 }

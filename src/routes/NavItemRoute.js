@@ -1,5 +1,5 @@
-import RbNav from "../components/Bootstrap_5.3.3/RbNav";
-import RbNavItem from "../components/Bootstrap_5.3.3/RbNavItem";
+import Nav from "../components/Nav/Nav";
+import NavItem from "../components/NavItem/NavItem";
 
 function NavItemRoute() {
   const defaultDropdownItemsList = [
@@ -74,23 +74,23 @@ function NavItemRoute() {
     <>
       <h2>NavItem</h2>
       <h3>Варианты использования</h3>
-      <RbNav>
-        <RbNavItem type="a" href="https://ya.ru">
+      <Nav>
+        <NavItem type="a" href="https://ya.ru">
           Обычная ссылка
-        </RbNavItem>
-        <RbNavItem href="/nav">Ссылка-роутер</RbNavItem>
-        <RbNavItem href="/nav" disabled>
+        </NavItem>
+        <NavItem href="/nav">Ссылка-роутер</NavItem>
+        <NavItem href="/nav" disabled>
           Отключенная
-        </RbNavItem>
-        <RbNavItem
+        </NavItem>
+        <NavItem
           type="a"
           href="https://ya.ru"
           dropdown
           dropdownItemsList={defaultDropdownItemsList}
         >
           Выпадающий список
-        </RbNavItem>
-      </RbNav>
+        </NavItem>
+      </Nav>
     </>
   );
 }

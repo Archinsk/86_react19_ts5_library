@@ -11,40 +11,72 @@ import NavRoute from "./routes/NavRoute";
 import DropdownItemRoute from "./routes/DropdownItemRoute";
 import DropdownMenuRoute from "./routes/DropdownMenuRoute";
 import NavItemRoute from "./routes/NavItemRoute";
+import TestLayoutRoute from "./routes/TestLayoutRoute";
+import TableRoute from "./routes/TableRoute";
 
 function App() {
   return (
     <div className="app">
-      <ul>
+      <ul className="nav">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" className="nav-link">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/alert">Alert</Link>
+          <Link to="/alert" className="nav-link">
+            Alert
+          </Link>
         </li>
         <li>
-          <Link to="/badge">Badge</Link>
+          <Link to="/badge" className="nav-link">
+            Badge
+          </Link>
         </li>
         <li>
-          <Link to="/button">Button</Link>
+          <Link to="/button" className="nav-link">
+            Button
+          </Link>
         </li>
         <li>
-          <Link to="/dropdownitem">Button</Link>
+          <Link to="/dropdownitem" className="nav-link">
+            DropdownItem
+          </Link>
         </li>
         <li>
-          <Link to="/dropdownmenu">Button</Link>
+          <Link to="/dropdownmenu" className="nav-link">
+            DropdownMenu
+          </Link>
         </li>
         <li>
-          <Link to="/icon">Icon</Link>
+          <Link to="/icon" className="nav-link">
+            Icon
+          </Link>
         </li>
         <li>
-          <Link to="/nav">Nav</Link>
+          <Link to="/nav" className="nav-link">
+            Nav
+          </Link>
         </li>
         <li>
-          <Link to="/navlink">NavLink</Link>
+          <Link to="/navlink" className="nav-link">
+            NavLink
+          </Link>
         </li>
         <li>
-          <Link to="/navlink">NavItem</Link>
+          <Link to="/navlink" className="nav-link">
+            NavItem
+          </Link>
+        </li>
+        <li>
+          <Link to="/table" className="nav-link">
+            Table
+          </Link>
+        </li>
+        <li>
+          <Link to="/testlayout" className="nav-link">
+            TestLayout
+          </Link>
         </li>
       </ul>
       <Routes>
@@ -103,12 +135,13 @@ function App() {
           <Route path="/modal" element={<ModalRoute />} />
           <Route path="/modalheader" element={<ModalHeaderRoute />} />
           <Route path="/modalbody" element={<ModalBodyRoute />} />
-          <Route path="/modalfooter" element={<ModalFooterRoute />} />
-          <Route path="/table" element={<TableRoute />} />
-          <Route path="/tablerow" element={<TableRowRoute />} />
+          <Route path="/modalfooter" element={<ModalFooterRoute />} /> */}
+        <Route path="/table" element={<TableRoute />} />
+        {/* <Route path="/tablerow" element={<TableRowRoute />} />
           <Route path="/tablecell" element={<TableCellRoute />} />
           <Route path="/grid" element={<GridRoute />} />
           <Route path="/vars" element={<VarsRoute />} /> */}
+        <Route path="/testlayout" element={<TestLayoutRoute />} />
       </Routes>
     </div>
   );

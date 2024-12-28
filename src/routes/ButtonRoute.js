@@ -17,88 +17,38 @@ function ButtonRoute() {
       <Button>Простая</Button>
       <div className="use-case-title">Типизированная (type="submit")</div>
       <Button type="submit">Submit</Button>
-      <div className="use-case-title">Тематическая (theme="danger")</div>
-      <Button theme="danger">Danger</Button>
-      <div className="use-case-title">
-        С указанием размера (только "sm" и "lg")
-      </div>
-      <Button theme="secondary" size="sm" className="me-3">
-        Маленькая
-      </Button>
-      <Button theme="secondary" className="me-3">
-        Обычная
-      </Button>
-      <Button theme="secondary" size="lg">
-        Большая
-      </Button>
-      <div className="use-case-title">
-        Блочная (на всю ширину родительского элемента)
-      </div>
-      <Button theme="primary" block>
-        На всю ширину
-      </Button>
+
       <div className="use-case-title">С иконкой</div>
-      <Button theme="primary" icon="star" size="sm" className="me-3">
-        В избранное
-      </Button>
-      <Button theme="primary" icon="star" className="me-3">
-        В избранное
-      </Button>
-      <Button theme="primary" icon="star" size="lg">
-        В избранное
-      </Button>
+      <Button icon="star">В избранное</Button>
       <div className="use-case-title">Квадратная</div>
-      <Button theme="warning" square size="sm" className="me-3">
-        Ш
-      </Button>
-      <Button theme="warning" square className="me-3">
-        Ш
-      </Button>
-      <Button theme="warning" square size="lg">
-        Ш
-      </Button>
+      <Button className="button-square">Ш</Button>
+
       <div className="use-case-title">Квадратная с иконкой</div>
-      <Button
-        theme="danger"
-        icon="favorite"
-        square
-        size="sm"
-        className="me-3"
-      />
-      <Button theme="danger" icon="favorite" square className="me-3" />
-      <Button theme="danger" icon="favorite" square size="lg" />
-      <div className="use-case-title">С бэйджем</div>
-      <Button theme="secondary" size="sm" className="me-3" badge={defaultBadge}>
-        Маленькая
-      </Button>
-      <Button theme="secondary" className="me-3" badge={defaultBadge}>
-        Обычная
-      </Button>
-      <Button theme="secondary" size="lg" badge={defaultBadge}>
-        Большая
-      </Button>
-      <div className="use-case-title">
-        Кнопка с текстом и иконкой, на экранах шире 768px становящаяся
-        квадратной кнопкой с иконкой
+      <Button icon="favorite" className="button-square" />
+
+      <h3>Варианты стилизации</h3>
+      <div className="use-case-title">Базовые цвета</div>
+      <Button className="button-primary">Button</Button>
+      <Button className="button-secondary">Button</Button>
+      <Button className="button-danger">Button</Button>
+      <Button className="button-warning">Button</Button>
+      <Button className="button-success">Button</Button>
+      <div className="use-case-title">Размеры</div>
+      <Button className="button-small">Button</Button>
+      <Button>Button</Button>
+      <Button className="button-large">Button</Button>
+      <div className="use-case-title">Скругления</div>
+      <Button className="rounded">Button</Button>
+      <Button className="rounded-pill">Button</Button>
+      <div className="use-case-title">На всю ширину родительского элемента</div>
+      <Button className="w-100">На всю ширину</Button>
+      <h3>Варианты темизации</h3>
+      <h4>Artez-theme</h4>
+      <div data-theme="artez">
+        <Button className="button-primary">Отправить</Button>
+        <Button className="button-secondary">Закрыть</Button>
+        <Button icon="refresh" className="button-secondary button-square" />
       </div>
-      <Button theme="primary" icon="home" className="btn-square-md">
-        Button
-      </Button>
-      <Button type="reset">Type reset</Button>
-      <Button
-        onClick={(e) => {
-          console.log("Button click");
-          console.log(e);
-        }}
-        onDoubleClick={() => {
-          console.log("DoubleClick");
-        }}
-        onMouseOver={() => {
-          console.log("Mouse over");
-        }}
-      >
-        With handlers
-      </Button>
     </>
   );
 }

@@ -9,7 +9,7 @@ interface IconProps
   name: string;
 }
 
-const Icon: React.FC<IconProps> = ({ className, name, ...props }) => {
+const Icon: React.FC<IconProps> = ({ className, name = "star", ...props }) => {
   return (
     <span className={`icon${className ? " " + className : ""}`} {...props}>
       {name}

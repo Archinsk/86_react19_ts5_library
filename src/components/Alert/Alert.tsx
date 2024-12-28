@@ -9,9 +9,9 @@ interface AlertProps
 
 const Alert: React.FC<AlertProps> = ({ className, children, ...props }) => {
   return (
-    <span className={`alert${className ? " " + className : ""}`} {...props}>
+    <div className={`alert${className ? " " + className : ""}`} {...props}>
       {children}
-    </span>
+    </div>
   );
 };
 

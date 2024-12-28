@@ -1,2 +1,6 @@
 .nav-link {
+  display: block;
+  padding: var(--nav-link-padding-y, 0.5rem) var(--nav-link-padding-x, 1rem);
+  text-decoration: none;
+  list-style: none;
 }

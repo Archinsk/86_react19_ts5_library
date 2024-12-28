@@ -1,0 +1,24 @@
+[data-theme="artez"] {
+  padding: 1rem;
+
+  --body-background-color: hsl(232, 71%, 96%);
+
+  .tile {
+    background-color: hsl(0, 0%, 100%);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .button {
+    --button-border-radius: 0.25rem;
+  }
+
+  .button-primary {
+    --button-background-color: hsl(260, 72%, 50%);
+  }
+
+  .button-secondary {
+    --button-background-color: hsl(232, 71%, 96%);
+    --button-color: hsl(250, 65%, 12%);
+  }
+}
